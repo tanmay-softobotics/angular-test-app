@@ -1,0 +1,33 @@
+.search-bar-container {
+  background-color: #c42521;
+  height: 3.7vh;
+  padding: 0.5% 10%;
+  display: flex;
+  align-items: center;
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #e6e6e6;
+    width: 100%;
+    border-radius: 3px;
+    height: inherit;
+  }
+  .search-container .fa-container {
+    margin: 0 5px;
+    display: inline-flex;
+  }
+  .search-container img {
+    text-align: center;
+    height: 15px;
+  }
+
+  .search-container input {
+    width: 95%;
+    border: none;
+    background-color: #e6e6e6;
+    font-size: small;
+  }
+  input:focus {
+    outline: none;
+  }
+}
