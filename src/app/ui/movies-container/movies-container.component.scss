@@ -5,6 +5,9 @@
   height: 71vh;
   display: flex;
   flex-direction: column;
+  .title{
+    margin: 5px 0;
+  }
 }
 .movies-cards-container {
   display: flex;

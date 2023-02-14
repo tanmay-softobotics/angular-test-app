@@ -15,7 +15,6 @@ export class MovieCardComponent implements  OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['movie'] && changes['movie'].currentValue) {
       this.movie = changes['movie'].currentValue;
-      console.log(this.movie);
     }
   }
 
