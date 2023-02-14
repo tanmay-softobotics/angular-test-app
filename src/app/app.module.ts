@@ -6,10 +6,17 @@ import { NavbarComponent } from './ui/navbar/navbar.component';
 import { SearchBarComponent } from './ui/search-bar/search-bar.component';
 import { MoviesContainerComponent } from './ui/movies-container/movies-container.component';
 import { FooterComponent } from './ui/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SearchBarComponent, MoviesContainerComponent, FooterComponent],
-  imports: [BrowserModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    SearchBarComponent,
+    MoviesContainerComponent,
+    FooterComponent,
+  ],
+  imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
