@@ -1,1 +1,9 @@
-<p>movie-card works!</p>
+<div class="movie-card"  (mouseenter)="expandMovieDetails()" (mouseleave)="collapseMovieDetails()">
+    <div class="movie-card-img" [ngStyle]="{'background-image': 'url(' + movie?.images?.posterArt?.url + ')'}"></div>
+    <div class="movie-card-info">
+      <p class="movie-card-title">{{ movie?.title }}</p>
+      <p class="movie-card-date" [hidden]="!expanded">{{ movie?.releaseYear }}</p>
+      <p class="movie-card-description" [hidden]="!expanded">{{ movie?.description }}</p>
+    </div>
+</div>
+  

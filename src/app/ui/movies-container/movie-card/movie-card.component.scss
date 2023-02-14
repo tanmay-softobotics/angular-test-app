@@ -1,0 +1,31 @@
+.movie-card {
+    width: 12.5vw;
+    height: 25.7vh;
+    position: relative;
+    margin: 5px;
+  .movie-card-img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+  .movie-card-info {
+    padding: 0 6%;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transition: top 0.3s ease-in-out;
+    top: auto;
+    z-index: 2;
+    max-height: 100%;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    .movie-card-title{
+      font-weight: 600;
+    }
+  }
+}

@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Movie } from 'src/app/application/models/Movie';
 
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
-export class MovieCardComponent implements OnInit {
+export class MovieCardComponent implements  OnChanges {
+  @Input() movie ?: Movie;
+  public expanded = false;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['movie'] && changes['movie'].currentValue) {
+      this.movie = changes['movie'].currentValue;
+      console.log(this.movie);
+    }
+  }
+
+  expandMovieDetails() {
+    this.expanded = true;
+  }
+
+  collapseMovieDetails() {
+    this.expanded = false;
   }
 
 }

@@ -1,8 +1,15 @@
-.content{
-    padding: 0 10%;
-    color: white;
-    background-color: #1a1a1a;
-    height: 71vh;
-    display: flex;
-    flex-direction: column;
+.content {
+  padding: 0 10%;
+  color: white;
+  background-color: #1a1a1a;
+  height: 71vh;
+  display: flex;
+  flex-direction: column;
+}
+.movies-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: center;
 }

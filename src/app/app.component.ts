@@ -25,7 +25,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.moviesSubscription = this.moviesApiService.getMovies().subscribe({
       next: (response) => {
         this.pageSubscription = this.paginationService.currentPage$.subscribe(() => {
-          this.movies = this.paginationService.getPagedData(response);          
+          this.movies = this.paginationService.getPagedData(response);    
+          console.log(this.movies);
+                
         });
       },
       error: (error) => console.error(error),
