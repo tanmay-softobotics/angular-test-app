@@ -11,6 +11,7 @@ export class PaginationService {
   private currentPageSubject = new BehaviorSubject<number>(1);
   currentPage$ = this.currentPageSubject.asObservable();
   private moviesPerPage = 10;
+  private totalPages : number = 0;
 
   constructor() {}
 
@@ -18,7 +19,18 @@ export class PaginationService {
     this.currentPageSubject.next(page);
   }
 
+  setTotalPages(number : number) {
+    this.totalPages = number;
+  }
+
+  getTotalPages() : number{
+    return this.totalPages;
+  }
+
   getPagedData(responseApi: ResponseApi): Movie[] {
+    if(!this.totalPages){
+      this.setTotalPages(Math.ceil(responseApi.total / this.moviesPerPage));
+    }
     const startIndex = (this.currentPageSubject.value - 1) * this.moviesPerPage;
     const endIndex = startIndex + this.moviesPerPage;
     return responseApi.entries.slice(startIndex, endIndex);
