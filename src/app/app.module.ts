@@ -7,6 +7,8 @@ import { SearchBarComponent } from './ui/search-bar/search-bar.component';
 import { MoviesContainerComponent } from './ui/movies-container/movies-container.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginationComponent } from './ui/movies-container/pagination/pagination.component';
+import { MovieCardComponent } from './ui/movies-container/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     SearchBarComponent,
     MoviesContainerComponent,
     FooterComponent,
+    PaginationComponent,
+    MovieCardComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
