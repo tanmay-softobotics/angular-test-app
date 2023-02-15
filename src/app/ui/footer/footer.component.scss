@@ -1,12 +1,13 @@
 .footer-content {
   height: 19.3vh;
   background: black;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
 }
 
 .logo {

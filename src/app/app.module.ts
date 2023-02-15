@@ -8,7 +8,6 @@ import { MoviesContainerComponent } from './ui/movies-container/movies-container
 import { FooterComponent } from './ui/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginationComponent } from './ui/movies-container/pagination/pagination.component';
-import { MovieCardComponent } from './ui/movies-container/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { MovieCardComponent } from './ui/movies-container/movie-card/movie-card.
     MoviesContainerComponent,
     FooterComponent,
     PaginationComponent,
-    MovieCardComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],

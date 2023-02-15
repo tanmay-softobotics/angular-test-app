@@ -2,7 +2,8 @@
   padding: 0 10%;
   color: white;
   background-color: #1a1a1a;
-  height: 71vh;
+  height: 71.5vh;
+  min-height: 71.5vh;
   display: flex;
   flex-direction: column;
   .title{
@@ -14,5 +15,79 @@
   flex-wrap: wrap;
   align-items: center;
   align-content: space-between;
-  justify-content: center;
+  justify-content: space-between;
+  min-height: 81.3%;
+  overflow: auto;
 }
+.movie-card {
+  width: 12.5vw;
+  min-width: 110px;
+  height: 25.7vh;
+  min-height: 150px;
+  position: relative;
+  // margin: 5px;
+  flex-basis: 19%; 
+  flex-grow: 0; 
+  margin-bottom: 1rem;
+}
+.movie-card-img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.movie-card-info {
+  padding: 0 6%;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transition: top 0.3s ease-in-out;
+  top: auto;
+  z-index: 2;
+  max-height: 100%;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  .movie-card-title{
+    font-weight: 600;
+  }
+}
+
+/* For screens that can show 5 items */
+@media (min-width: 1024px) {
+.movie-card {
+  flex-basis: 19%;
+}
+}
+
+/* For screens that can show 4 items */
+@media (max-width: 1023px) and (min-width: 768px) {
+.movie-card {
+  flex-basis: 24%;
+}
+}
+
+/* For screens that can show 3 items */
+@media (max-width: 767px) and (min-width: 576px) {
+.movie-card {
+  flex-basis: 32%;
+}
+}
+
+/* For screens that can show 2 items */
+@media (max-width: 575px) and (min-width: 400px) {
+.movie-card {
+  flex-basis: 49%;
+}
+}
+
+/* For screens that can show 1 item */
+@media (max-width: 399px) {
+.movie-card {
+  flex-basis: 100%;
+}
+}
+
