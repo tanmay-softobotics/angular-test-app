@@ -1,0 +1,14 @@
+<div class="content">
+    <div class="title">Popular Movies</div>
+    <div class="movies-cards-container" >
+            <div class="movie-card" *ngFor="let movie of movies; let i = index" (mouseenter)="expandMovieDetails(i)" (mouseleave)="collapseMovieDetails()">
+                <div class="movie-card-img" [ngStyle]="{'background-image': 'url(' + movie?.images?.posterArt?.url + ')'}"></div>
+                <div class="movie-card-info">
+                  <p class="movie-card-title">{{ movie?.title }}</p>
+                  <p class="movie-card-date" [hidden]="expanded !== i">{{ movie?.releaseYear }}</p>
+                  <p class="movie-card-description" [hidden]="expanded !== i">{{ movie?.description }}</p>
+                </div>
+            </div>
+    </div>
+    <app-pagination></app-pagination>
+</div>

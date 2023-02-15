@@ -1,0 +1,12 @@
+<div class="pagination">
+    <div class="arrow-left" (click)="currentPage !== 1 && goToPage(currentPage-1)">
+      <img src="../../../../assets/icon/left-chevron.svg"/>
+    </div>
+    <div class="pages">
+        <span *ngFor="let page of pages" class="page-number" [ngClass]="{'active': page === currentPage}" (click)="goToPage(page)">{{ page }}</span>
+    </div>
+    <div class="arrow-right" (click)="currentPage !== totalPages && goToPage(currentPage+1)">
+        <img src="../../../../assets/icon/right-chevron.svg"/>
+    </div>
+  </div>
+  
