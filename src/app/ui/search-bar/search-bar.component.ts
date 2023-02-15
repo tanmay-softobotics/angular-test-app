@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesApiService } from 'src/app/services/movies-api.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private moviesApiService: MoviesApiService) { }
 
   ngOnInit(): void {
   }
 
+  search(input: string): void {
+    this.moviesApiService.search(input);
+  }
+  
 }

@@ -3,6 +3,6 @@
     <div class="fa-container">
       <img src="../../../assets/icon/search.svg" />
     </div>
-    <input type="text" placeholder="Title" />
+    <input type="text" placeholder="Title" #searchInput (input)="search(searchInput.value)"/>
   </div>
 </div>
