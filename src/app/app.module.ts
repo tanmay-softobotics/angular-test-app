@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './ui/navbar/navbar.component';
 import { SearchBarComponent } from './ui/search-bar/search-bar.component';
