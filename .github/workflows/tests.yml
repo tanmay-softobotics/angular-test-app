@@ -1,0 +1,24 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run tests
+      run: npm test
+
+    - name: Set status
+      uses: jakejarvis/set-github-status@v1.1.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        state: ${{ job.status }}
+        description: "Tests ${job.status}"
+        context: "pull-request/check"
