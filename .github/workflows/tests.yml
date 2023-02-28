@@ -14,11 +14,3 @@ jobs:
 
     - name: Run tests
       run: npm test
-
-    - name: Set status
-      uses: jakejarvis/set-github-status@v1.1.0
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        state: ${{ job.status }}
-        description: "Tests ${job.status}"
-        context: "pull-request/check"
