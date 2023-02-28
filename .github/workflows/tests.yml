@@ -12,13 +12,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Install dependencies
+      run: npm i --force
+
     - name: Run tests
       run: npm test
-
-    - name: Set status
-      uses: jakejarvis/set-github-status@v1.1.0
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        state: ${{ job.status }}
-        description: "Tests ${job.status}"
-        context: "pull-request/check"
